@@ -11,10 +11,12 @@ namespace BeFaster.App.Tests.Solutions.SUM
         [TestCase("bob", ExpectedResult = "Hello bob")]
         [TestCase("franky dean", ExpectedResult = "Hello franky dean")]
         [TestCase("franky d'olive", ExpectedResult = "Hello franky d'olive")]
+        [TestCase("Craftsman", ExpectedResult = "Hello world")]
         public string ComputeHello(string input)
         {
             return HelloSolution.Hello(input);
         }
     }
 }
+
 
