@@ -1,15 +1,20 @@
-﻿using BeFaster.App.Solutions.SUM;
+﻿using BeFaster.App.Solutions.HLO;
+using BeFaster.App.Solutions.SUM;
 using NUnit.Framework;
 
 namespace BeFaster.App.Tests.Solutions.SUM
 {
     [TestFixture]
-    public class SumSolutionTest
+    public class HloSolutionTest
     {
-        [TestCase(1, 1, ExpectedResult = 2)]
-        public int ComputeSum(int x, int y)
+        [TestCase("sam", ExpectedResult = "Hello sam")]
+        [TestCase("bob", ExpectedResult = "Hello bob")]
+        [TestCase("franky dean", ExpectedResult = "Hello franky dean")]
+        [TestCase("franky d'olive", ExpectedResult = "Hello franky d'olive")]
+        public string ComputeHello(string input)
         {
-            return SumSolution.Sum(x, y);
+            return HelloSolution.Hello(input);
         }
     }
 }
+
