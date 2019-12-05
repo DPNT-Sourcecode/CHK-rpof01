@@ -6,7 +6,7 @@ namespace BeFaster.App.Solutions.HLO
     {
         public static string Hello(string friendName)
         {
-            if(friendName == "Craftsman" || friendName == "Mr.X")
+            if(friendName == "Craftsman" || friendName == "Mr. X")
             {
                 return $"Hello, World!";
             }
@@ -15,6 +15,3 @@ namespace BeFaster.App.Solutions.HLO
         }
     }
 }
-
-
-
