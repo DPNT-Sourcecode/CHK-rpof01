@@ -55,7 +55,8 @@ namespace BeFaster.App.Solutions.CHK
 
                 if(offers.ContainsKey(item))
                 {
-
+                    var qtyForOffer = 
+                    if()
                 }
                 else
                 {
@@ -93,6 +94,7 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
 
