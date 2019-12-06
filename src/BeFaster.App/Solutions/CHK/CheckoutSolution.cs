@@ -16,9 +16,15 @@ namespace BeFaster.App.Solutions.CHK
             if (!isValid)
                 return -1;
 
+            var groupedItems = skus.GroupBy(x => x);
+
+            foreach (var group in groupedItems)
+            {
+
+            }
 
 
-            //id = CHK_R1_002, req = checkout(""), resp = 0
+
             //id = CHK_R1_003, req = checkout("A"), resp = 0
             //id = CHK_R1_004, req = checkout("B"), resp = 0
             //id = CHK_R1_005, req = checkout("C"), resp = 0
@@ -46,5 +52,3 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
-
-
