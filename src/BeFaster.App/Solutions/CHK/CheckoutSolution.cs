@@ -6,6 +6,8 @@ namespace BeFaster.App.Solutions.CHK
 {
     public static class CheckoutSolution
     {
+
+
         public static int ComputePrice(string skus)
         {
             if (string.IsNullOrEmpty(skus))
@@ -16,11 +18,15 @@ namespace BeFaster.App.Solutions.CHK
             if (!isValid)
                 return -1;
 
+            Dictionary<char, (int: qty, int : price)>
+
+
             var groupedItems = skus.GroupBy(x => x);
 
             foreach (var group in groupedItems)
             {
-
+                var item = group.Key;
+                var countOfItem = group.ToList();
             }
 
 
@@ -52,3 +58,4 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
