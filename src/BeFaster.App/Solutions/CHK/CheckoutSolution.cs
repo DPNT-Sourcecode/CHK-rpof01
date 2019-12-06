@@ -25,7 +25,7 @@ namespace BeFaster.App.Solutions.CHK
         public static int ComputePrice(string skus)
         {
             if (string.IsNullOrEmpty(skus))
-                return -1;
+                return 0;
 
             var validCodes = new List<char>() { 'A', 'B', 'C', 'D' };
             var isValid = skus.All(x => validCodes.Contains(x));
@@ -74,9 +74,3 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
-
-
-
-
-
-

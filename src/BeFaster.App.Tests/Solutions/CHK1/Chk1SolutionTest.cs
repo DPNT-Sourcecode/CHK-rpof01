@@ -6,7 +6,7 @@ namespace BeFaster.App.Tests.Solutions.SUM
     [TestFixture]
     public class Chk1SolutionTest
     {
-        [TestCase("", ExpectedResult = -1)]
+        [TestCase("", ExpectedResult = 0)]
         [TestCase("a", ExpectedResult = -1)]
         [TestCase("Ab", ExpectedResult = -1)]
         [TestCase("abbA", ExpectedResult = -1)]
@@ -22,6 +22,3 @@ namespace BeFaster.App.Tests.Solutions.SUM
         }
     }
 }
-
-
-
