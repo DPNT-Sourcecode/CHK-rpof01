@@ -7,10 +7,10 @@ namespace BeFaster.App.Tests.Solutions.SUM
     [TestFixture]
     public class HloSolutionTest
     {
-        [TestCase("sam", ExpectedResult = "Hello sam")]
-        [TestCase("bob", ExpectedResult = "Hello bob")]
-        [TestCase("franky dean", ExpectedResult = "Hello franky dean")]
-        [TestCase("franky d'olive", ExpectedResult = "Hello franky d'olive")]
+        [TestCase("sam", ExpectedResult = "Hello, sam!")]
+        [TestCase("bob", ExpectedResult = "Hello, bob!")]
+        [TestCase("franky dean", ExpectedResult = "Hello, franky dean!")]
+        [TestCase("franky d'olive", ExpectedResult = "Hello, franky d'olive!")]
         [TestCase("Craftsman", ExpectedResult = "Hello, World!")]
         [TestCase("Mr. X", ExpectedResult = "Hello, World!")]
         public string ComputeHello(string input)
@@ -19,3 +19,4 @@ namespace BeFaster.App.Tests.Solutions.SUM
         }
     }
 }
+

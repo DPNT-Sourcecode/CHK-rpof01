@@ -11,7 +11,8 @@ namespace BeFaster.App.Solutions.HLO
                 return $"Hello, World!";
             }
 
-            return $"Hello {friendName}";
+            return $"Hello, {friendName}!";
         }
     }
 }
+
