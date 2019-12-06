@@ -4,6 +4,20 @@ using System.Linq;
 
 namespace BeFaster.App.Solutions.CHK
 {
+
+    public class Offer
+    {
+        public Offer(int qty, int price)
+        {
+            Qty = qty;
+            Price = price;
+        }
+
+        public int Qty { get;  }
+        public int Price { get;  }
+    }
+
+
     public static class CheckoutSolution
     {
 
@@ -18,15 +32,35 @@ namespace BeFaster.App.Solutions.CHK
             if (!isValid)
                 return -1;
 
-            Dictionary<char, (int: qty, int : price)>
+            var offers = new Dictionary<char, Offer>();
+            offers.Add('A', new Offer(3, 130));
+            offers.Add('B', new Offer(2, 45));
+
+            var normalPrice = new Dictionary<char, int>();
+            normalPrice.Add('A', 50);
+            normalPrice.Add('B', 30);
+
+
+
 
 
             var groupedItems = skus.GroupBy(x => x);
+
+            var total = 0;
 
             foreach (var group in groupedItems)
             {
                 var item = group.Key;
                 var countOfItem = group.ToList();
+
+                if(offers.ContainsKey(item))
+                {
+
+                }
+                else
+                {
+                    total += 
+                }
             }
 
 
@@ -58,4 +92,5 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
