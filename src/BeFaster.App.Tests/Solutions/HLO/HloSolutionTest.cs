@@ -8,7 +8,7 @@ namespace BeFaster.App.Tests.Solutions.SUM
     public class HloSolutionTest
     {
         [TestCase("sam", ExpectedResult = "Hello, sam!")]
-        [TestCase("bob", ExpectedResult = "Hello, bob!")]
+        [TestCase("bob", ExpectedResult = "Hello, bob!")]art
         [TestCase("franky dean", ExpectedResult = "Hello, franky dean!")]
         [TestCase("franky d'olive", ExpectedResult = "Hello, franky d'olive!")]
         [TestCase("Craftsman", ExpectedResult = "Hello, Craftsman!")]
@@ -19,5 +19,6 @@ namespace BeFaster.App.Tests.Solutions.SUM
         }
     }
 }
+
 
 
