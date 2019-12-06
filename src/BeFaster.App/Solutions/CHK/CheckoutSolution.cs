@@ -59,7 +59,8 @@ namespace BeFaster.App.Solutions.CHK
                 }
                 else
                 {
-                    total += 
+                    //todo
+                    total += 0; 
                 }
             }
 
@@ -92,5 +93,6 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
