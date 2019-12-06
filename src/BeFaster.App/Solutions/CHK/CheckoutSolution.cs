@@ -39,10 +39,8 @@ namespace BeFaster.App.Solutions.CHK
             var normalPrice = new Dictionary<char, int>();
             normalPrice.Add('A', 50);
             normalPrice.Add('B', 30);
-
-
-
-
+            normalPrice.Add('C', 20);
+            normalPrice.Add('D', 15);
 
             var groupedItems = skus.GroupBy(x => x);
 
@@ -51,17 +49,25 @@ namespace BeFaster.App.Solutions.CHK
             foreach (var group in groupedItems)
             {
                 var item = group.Key;
-                var countOfItem = group.ToList();
+                var countOfItem = group.ToList().Count;
 
                 if(offers.ContainsKey(item))
                 {
-                    var qtyForOffer = 
-                    if()
+                    var qtyForOffer = offers[item];
+                    if (countOfItem > qtyForOffer.Qty)
+                    {
+                        var withinOffer = countOfItem / qtyForOffer.Qty;
+                        var outsideOffer = countOfItem - (withinOffer * qtyForOffer.Qty);
+                        total += withinOffer * qtyForOffer.Price + outsideOffer * normalPrice[item];
+                    }
+                    else
+                    {
+                        total += countOfItem * normalPrice[item];
+                    }
                 }
                 else
                 {
-                    //todo
-                    total += 0; 
+                    total += countOfItem * normalPrice[item];
                 }
             }
 
@@ -94,6 +100,7 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
 
